@@ -15,6 +15,7 @@ try {
     include_once "$HOME/helpers/save-api-to-json/SaveJson_v2_posting_fbs_act_list.php";
     include_once "$HOME/helpers/save-api-to-json/SaveJson_v2_posting_fbs_act_get_postings.php";
     include_once "$HOME/helpers/save-api-to-json/SaveJson_v1_description_category_attribute.php";
+    include_once "$HOME/helpers/custom-tables/CustomPostings.php";
 
     SaveJson_v3_product_list::main();
     SaveJson_v3_product_info_list::main();
@@ -28,6 +29,7 @@ try {
     SaveJson_v2_posting_fbs_act_list::main();
     SaveJson_v2_posting_fbs_act_get_postings::main();
     SaveJson_v1_description_category_attribute::main();
+    CustomPostings::main();
 }
 catch(Throwable $exception) {
     echo "<pre>";

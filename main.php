@@ -16,6 +16,9 @@ try {
     include_once "$HOME/helpers/save-api-to-json/SaveJson_v2_posting_fbs_act_get_postings.php";
     include_once "$HOME/helpers/save-api-to-json/SaveJson_v1_description_category_attribute.php";
     include_once "$HOME/helpers/custom-tables/CustomPostings.php";
+    include_once "$HOME/helpers/custom-tables/CountProducts.php";
+    include_once "$HOME/helpers/reports/ReportInventarizaciya.php";
+    include_once "$HOME/helpers/reports/ReportInventarizaciyaAsCsv.php";
 
     SaveJson_v3_product_list::main();
     SaveJson_v3_product_info_list::main();
@@ -30,6 +33,9 @@ try {
     SaveJson_v2_posting_fbs_act_get_postings::main();
     SaveJson_v1_description_category_attribute::main();
     CustomPostings::main();
+    CustomCountProducts::main();
+    ReportInventarizaciya::main();
+    ReportInventarizaciyaAsCsv::main();
 }
 catch(Throwable $exception) {
     echo "<pre>";
